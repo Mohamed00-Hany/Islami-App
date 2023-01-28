@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold">#B7925F</color>
+    <color name="goldVariant">#855F2B</color>
+    <color name="blueDark">#141A2E</color>
+    <color name="blueDarkVariant">#0B101E</color>
+    <color name="goldDark">#FACC1D</color>
+    <color name="goldDarkVariant">#DAB21A</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="noTasbeh_color_light">#CCAE85</color>
+    <color name="noTasbeh_color_dark">#0F1725</color>
+    <color name="activity_details_background_light_style">#BFFFFFFF</color>
+    <color name="activity_details_background_dark_style">#BF14192D</color>
+</resources>
