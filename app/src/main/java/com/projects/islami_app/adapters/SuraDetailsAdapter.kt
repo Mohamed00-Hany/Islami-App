@@ -23,7 +23,7 @@ class SuraDetailsAdapter(val suraLines:List<String>) :RecyclerView.Adapter<SuraD
         return suraLines.size
     }
 
-    class ViewHolder(val itemView:View):RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
             val suraLine=itemView.findViewById<TextView>(R.id.sura_line_text)
     }
 }

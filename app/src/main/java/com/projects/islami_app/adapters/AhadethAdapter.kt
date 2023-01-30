@@ -31,7 +31,7 @@ class AhadethAdapter(val ahadethList:MutableList<String>) : RecyclerView.Adapter
         return ahadethList.size
     }
 
-    class ViewHolder(val itemView:View):RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         val hadethNumber:TextView=itemView.findViewById(R.id.hadethNumber)
     }
 }

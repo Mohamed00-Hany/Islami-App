@@ -33,7 +33,7 @@ class QuranAdapter(val surasList:MutableList<QuranDataClass>) : RecyclerView.Ada
         return surasList.size
     }
 
-    class ViewHolder(val itemView:View):RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         val suraName:TextView=itemView.findViewById(R.id.sura_name)
         val ayatNumber:TextView=itemView.findViewById(R.id.no_ayat)
     }

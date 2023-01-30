@@ -23,7 +23,7 @@ class HadethDetailsAdapter(val hadethLines:List<String>) :RecyclerView.Adapter<H
         return hadethLines.size
     }
 
-    class ViewHolder(val itemView:View):RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         val hadethLine=itemView.findViewById<TextView>(R.id.hadeth_line_text)
     }
 }
