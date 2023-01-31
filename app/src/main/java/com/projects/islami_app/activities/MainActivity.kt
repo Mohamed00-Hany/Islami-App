@@ -27,19 +27,19 @@ class MainActivity : AppCompatActivity() {
         binding.navigationBar.setOnItemSelectedListener {
             if(it.itemId== R.id.quran)
             {
-                showQuranFragment()
+                showFragment(QuranFragment())
             }
             else if(it.itemId== R.id.ahadeth)
             {
-                showAhadethFragment()
+                showFragment(AhadethFragment())
             }
             else if(it.itemId== R.id.sebha)
             {
-                showSebhaFragment()
+                showFragment(SebhaFragment())
             }
             else if(it.itemId== R.id.radio)
             {
-                showRadioFragment()
+                showFragment(RadioFragment())
             }
             return@setOnItemSelectedListener true
         }
@@ -64,20 +64,8 @@ class MainActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
-    fun showQuranFragment()
+    fun showFragment(fragment: Fragment)
     {
-        supportFragmentManager.beginTransaction().replace(R.id.fragments_container, QuranFragment()).commit()
-    }
-    fun showAhadethFragment()
-    {
-        supportFragmentManager.beginTransaction().replace(R.id.fragments_container,AhadethFragment()).commit()
-    }
-    fun showSebhaFragment()
-    {
-        supportFragmentManager.beginTransaction().replace(R.id.fragments_container, SebhaFragment()).commit()
-    }
-    fun showRadioFragment()
-    {
-        supportFragmentManager.beginTransaction().replace(R.id.fragments_container, RadioFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragments_container, fragment).commit()
     }
 }

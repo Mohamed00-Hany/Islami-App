@@ -35,7 +35,7 @@ class AhadethFragment : Fragment() {
         recyclerView.adapter=adapter
         adapter.onHadethClick=object : AhadethAdapter.OnItemClick {
             override fun onClick(position: Int){
-                val intent=Intent(view.context, HadethDetailsActivity::class.java)
+                val intent=Intent(requireActivity(), HadethDetailsActivity::class.java)
                 intent.putExtra("hadethPosition",position)
                 startActivity(intent)
             }

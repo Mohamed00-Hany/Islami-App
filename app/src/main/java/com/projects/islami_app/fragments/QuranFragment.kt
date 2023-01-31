@@ -39,7 +39,7 @@ class QuranFragment : Fragment() {
         recyclerView.adapter=adapter
         adapter.onSuraClick=object : QuranAdapter.onItemClick {
             override fun onClick(position: Int) {
-                val intent=Intent(view.context, SuraDetailsActivity::class.java)
+                val intent=Intent(requireActivity(), SuraDetailsActivity::class.java)
                 intent.putExtra("suraPosition",position)
                 startActivity(intent)
             }
