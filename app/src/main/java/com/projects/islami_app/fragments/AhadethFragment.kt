@@ -51,7 +51,6 @@ class AhadethFragment : Fragment() {
             val s:String="الحديث رقم "
             ahadethList.add(s+i)
         }
-
     }
 
 }
