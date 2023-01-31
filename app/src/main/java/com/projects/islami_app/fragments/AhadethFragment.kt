@@ -29,20 +29,20 @@ class AhadethFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView=view.findViewById(R.id.quran_recyclerview)
         layoutManager= LinearLayoutManager(view.context)
-        createQuranList()
+        createAhadethList()
         adapter= AhadethAdapter(ahadethList)
         recyclerView.layoutManager=layoutManager
         recyclerView.adapter=adapter
         adapter.onHadethClick=object : AhadethAdapter.OnItemClick {
             override fun onClick(position: Int){
-                val intent=Intent(view.context, HadethDetailsActivity::class.java)
+                val intent=Intent(requireActivity(), HadethDetailsActivity::class.java)
                 intent.putExtra("hadethPosition",position)
                 startActivity(intent)
             }
         }
     }
 
-    fun createQuranList()
+    fun createAhadethList()
     {
         ahadethList= mutableListOf()
 
@@ -51,7 +51,6 @@ class AhadethFragment : Fragment() {
             val s:String="الحديث رقم "
             ahadethList.add(s+i)
         }
-
     }
 
 }
