@@ -29,7 +29,7 @@ class AhadethFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView=view.findViewById(R.id.quran_recyclerview)
         layoutManager= LinearLayoutManager(view.context)
-        createQuranList()
+        createAhadethList()
         adapter= AhadethAdapter(ahadethList)
         recyclerView.layoutManager=layoutManager
         recyclerView.adapter=adapter
@@ -42,7 +42,7 @@ class AhadethFragment : Fragment() {
         }
     }
 
-    fun createQuranList()
+    fun createAhadethList()
     {
         ahadethList= mutableListOf()
 
