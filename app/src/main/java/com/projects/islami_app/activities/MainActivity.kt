@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             {
                 showFragment(RadioFragment())
             }
-            return@setOnItemSelectedListener true
+            return@setOnItemSelectedListener true;
         }
         binding.navigationBar.selectedItemId= R.id.quran
         val appModeButton:Button=findViewById(R.id.dark_mode_button)
