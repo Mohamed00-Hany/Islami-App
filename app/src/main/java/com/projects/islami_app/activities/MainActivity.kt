@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
             else if(it.itemId== R.id.radio)
             {
-                showFragment(RadioFragment())
+                showFragment(RadioFragment());
             }
             return@setOnItemSelectedListener true;
         }
