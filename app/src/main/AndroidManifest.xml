@@ -2,18 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/islami_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/islami_launcher"
         android:supportsRtl="true"
+        android:name=".MyApplication"
         android:theme="@style/Theme.IslamiApp"
         tools:targetApi="31">
+
+        <service android:name=".radio.PlayerService"/>
+
         <activity
-            android:name=".activities.HadethDetailsActivity"
+            android:name=".ahadeth.HadethDetailsActivity"
             android:exported="false"
             android:theme="@style/no_bar">
             <meta-data
@@ -21,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.SuraDetailsActivity"
+            android:name=".quran.SuraDetailsActivity"
             android:exported="false"
             android:theme="@style/no_bar">
             <meta-data
@@ -29,7 +36,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:exported="true"
             android:theme="@style/no_bar">
             <intent-filter>
@@ -43,7 +50,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/no_bar">
             <meta-data

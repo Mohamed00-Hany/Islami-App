@@ -17,62 +17,73 @@
         android:layout_marginTop="10dp"
         android:textStyle="bold"
         style="@style/fragment_text_style"/>
-    <ImageView
-        android:id="@+id/radioImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/radio_image"
-        app:layout_constraintTop_toBottomOf="@id/islamiText"
-        app:layout_constraintStart_toStartOf="@id/islamiText"
-        app:layout_constraintEnd_toEndOf="@id/islamiText"/>
     <TextView
         android:id="@+id/radioText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="اذاعة القرآن الكريم"
         android:textStyle="bold"
-        style="@style/fragment_text_style"
         android:textSize="26sp"
-        app:layout_constraintTop_toBottomOf="@id/radioImage"
+        android:layout_marginTop="90sp"
+        app:layout_constraintTop_toBottomOf="@id/islamiText"
         app:layout_constraintStart_toStartOf="@id/radioImage"
         app:layout_constraintEnd_toEndOf="@id/radioImage"
-        android:layout_marginTop="40sp"/>
+        style="@style/fragment_text_style"/>
+    <ImageView
+        android:id="@+id/radioImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/radio_image"
+        app:layout_constraintTop_toBottomOf="@id/islamiText"
+        app:layout_constraintStart_toStartOf="@id/islamiText"
+        app:layout_constraintEnd_toEndOf="@id/islamiText"/>
     <TextView
+        android:id="@+id/channelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="جاري الإتصال..."
+        android:textStyle="bold"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/radioImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/playButton"
+        style="@style/fragment_text_style" />
+    <ImageButton
         android:id="@+id/playButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/play_button"
-        app:layout_constraintStart_toStartOf="@id/radioText"
-        app:layout_constraintEnd_toEndOf="@id/radioText"
-        app:layout_constraintTop_toBottomOf="@id/radioText"
-        android:layout_marginTop="40dp"
-        style="@style/radio_button_style"/>
-    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/radio_buttons_style"/>
+    <ImageButton
         android:id="@+id/nextButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/next_button"
         app:layout_constraintStart_toEndOf="@id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioText"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="10dp"
-        style="@style/radio_button_style"/>
-    <TextView
+        app:layout_constraintTop_toBottomOf="@id/radioImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/radio_buttons_style"/>
+    <ImageButton
         android:id="@+id/previousButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/previous_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/playButton"
-        app:layout_constraintTop_toBottomOf="@id/radioText"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        style="@style/radio_button_style"/>
-
-
+        app:layout_constraintTop_toBottomOf="@id/radioImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/radio_buttons_style"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

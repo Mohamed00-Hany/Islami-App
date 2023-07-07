@@ -23,9 +23,6 @@
     <style name="fragment_view_style" parent="Theme.IslamiApp">
         <item name="android:background">@color/gold</item>
     </style>
-    <style name="radio_button_style" parent="Theme.IslamiApp">
-        <item name="android:backgroundTint">@color/gold</item>
-    </style>
     <style name="sebha_Tasbeh_no" parent="Theme.IslamiApp">
         <item name="android:backgroundTint">@color/noTasbeh_color_light</item>
         <item name="android:textColor">@color/black</item>
@@ -53,5 +50,9 @@
         <item name="iconTint">@color/black</item>
         <item name="iconSize">30dp</item>
         <item name="android:background">@drawable/button_rounded3</item>
+        <item name="backgroundTint">@color/gold</item>
+    </style>
+    <style name="radio_buttons_style">
+        <item name="android:backgroundTint">@color/gold</item>
     </style>
 </resources>
