@@ -1,14 +1,11 @@
 # Islami-App
-This app show quran to you and each sura has sura content so you can choose any sura to read it and you can read the sura content when click on it and it show ahadeth to you and each hadeth has hadeth content so you can choose any hadeth to read it and you can read the hadeth content when click on it and you can use sebha and you can play quran radio also you can convert the app them to night or light.
-
+This app can help Muslims to read quran and ahadeth also they can use sebha and play radio to listen to quran also convert the app them to night or light.
 ## Topics
 + #### Fragments
 + #### Recycler View
 + #### Retrofit
 + #### Services
 + #### Notifications
-
-
 ## Images
 ### Light Mode
 ![splash](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/fcadc9a2-a2dc-48fa-bb9a-248c53b85636)
@@ -18,8 +15,6 @@ This app show quran to you and each sura has sura content so you can choose any 
 ![sura content – 3](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/ef332c5c-5640-4c2c-801f-43a1f5487cd0)
 ![tasbeeh](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/282f3fc7-b0ee-4826-ac80-db725fe659ca)
 ![radio](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/ebc6a2d6-5905-4fd6-a7ba-9547595b7616)
-
-
 ### Dark Mode
 ![splash - dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/afd63cac-3fee-4b36-a946-ccf836fd6021)
 ![quran – dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/738d1273-ad4d-4bbc-ab0d-2853be264ba4)
