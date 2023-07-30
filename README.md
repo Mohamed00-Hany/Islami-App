@@ -1,17 +1,17 @@
-# **Islami-App**
+# Islami-App
 This app show quran to you and each sura has sura content so you can choose any sura to read it and you can read the sura content when click on it and it show ahadeth to you and each hadeth has hadeth content so you can choose any hadeth to read it and you can read the hadeth content when click on it and you can use sebha and you can play quran radio also you can convert the app them to night or light.
 
-## **Topics**
-+ ##### Fragments
-+ ##### Recycler View
-+ ##### Retrofit
-+ ##### Services
-+ ##### Notifications
+## Topics
++ #### Fragments
++ #### Recycler View
++ #### Retrofit
++ #### Services
++ #### Notifications
 
 
-## **Images**
-### **Light Mode**
-![splash](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/17d81f24-7e21-459b-8d82-1c5fc83861a4)
+## Images
+### Light Mode
+![splash](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/fcadc9a2-a2dc-48fa-bb9a-248c53b85636)
 ![quran](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/c8adc9f9-5f5e-4750-bb21-66849aae4b49)
 ![sura content](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/a194a13f-d9b1-4f83-8723-a80ff683a651)
 ![quran – 3](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/39ce841b-4213-4105-8369-992676b4b11f)
@@ -20,8 +20,8 @@ This app show quran to you and each sura has sura content so you can choose any 
 ![radio](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/ebc6a2d6-5905-4fd6-a7ba-9547595b7616)
 
 
-### **Dark Mode**
-![splash – dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/337ed6f7-2c6c-4898-b167-8aab8e044428)
+### Dark Mode
+![splash - dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/afd63cac-3fee-4b36-a946-ccf836fd6021)
 ![quran – dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/738d1273-ad4d-4bbc-ab0d-2853be264ba4)
 ![sura content – 1 - dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/000b6fbc-67bb-4c13-bd2a-e12e34c6025b)
 ![quran – 1 - dark](https://github.com/Mohamed00-Hany/Islami-App/assets/123842448/c20a9de3-b05e-4e61-9ea4-85408dd8bbff)
