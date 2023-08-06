@@ -1,4 +1,4 @@
-package com.projects.islami_app.quran
+package com.projects.islami_app.ui.quran
 
 public data class QuranDataClass(val ayatNumber:String,val suraName:String)
 

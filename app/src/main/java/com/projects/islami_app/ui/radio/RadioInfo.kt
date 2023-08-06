@@ -1,4 +1,4 @@
-package com.projects.islami_app.radio
+package com.projects.islami_app.ui.radio
 
 import android.content.ServiceConnection
 import com.projects.islami_app.apis.models.RadioChannel
@@ -13,6 +13,6 @@ object RadioInfo {
     const val ACTION_PLAY_FIRST_TIME="play_first_time"
     const val ACTION_STOP="stop"
     const val ACTION_CLOSE="close"
-    var radioPlayerService:PlayerService?=null
+    var radioPlayerService: PlayerService?=null
     lateinit var serviceConnection: ServiceConnection
 }

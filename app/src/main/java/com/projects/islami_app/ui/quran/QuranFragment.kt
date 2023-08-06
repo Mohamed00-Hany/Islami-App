@@ -1,4 +1,4 @@
-package com.projects.islami_app.quran
+package com.projects.islami_app.ui.quran
 
 import android.content.Intent
 import android.os.Bundle

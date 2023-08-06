@@ -13,14 +13,14 @@
         android:icon="@mipmap/islami_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".MyApplication"
+        android:name=".ui.MyApplication"
         android:theme="@style/Theme.IslamiApp"
         tools:targetApi="31">
 
-        <service android:name=".radio.PlayerService"/>
+        <service android:name=".ui.radio.PlayerService"/>
 
         <activity
-            android:name=".ahadeth.HadethDetailsActivity"
+            android:name=".ui.ahadeth.HadethDetailsActivity"
             android:exported="false"
             android:theme="@style/no_bar">
             <meta-data
@@ -28,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".quran.SuraDetailsActivity"
+            android:name=".ui.quran.SuraDetailsActivity"
             android:exported="false"
             android:theme="@style/no_bar">
             <meta-data
@@ -36,7 +36,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".splash.SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/no_bar">
             <intent-filter>
@@ -50,7 +50,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/no_bar">
             <meta-data

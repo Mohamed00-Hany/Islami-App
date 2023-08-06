@@ -1,4 +1,4 @@
-package com.projects.islami_app.ahadeth
+package com.projects.islami_app.ui.ahadeth
 
 import android.content.Intent
 import android.os.Bundle

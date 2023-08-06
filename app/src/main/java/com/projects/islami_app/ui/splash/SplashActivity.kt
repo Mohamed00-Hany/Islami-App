@@ -1,4 +1,4 @@
-package com.projects.islami_app.splash
+package com.projects.islami_app.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,13 +7,12 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatDelegate
 import com.projects.islami_app.R
-import com.projects.islami_app.main.MainActivity
+import com.projects.islami_app.ui.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         Handler(Looper.getMainLooper()).postDelayed({
             val intent=Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)

@@ -1,28 +1,25 @@
-package com.projects.islami_app.radio
+package com.projects.islami_app.ui.radio
 
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.content.ServiceConnection
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Binder
 import android.os.IBinder
-import android.util.Log
 import android.widget.RemoteViews
 import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
-import com.projects.islami_app.MyApplication.Companion.NOTIFICATION_CHANNEL_ID
+import com.projects.islami_app.ui.MyApplication.Companion.NOTIFICATION_CHANNEL_ID
 import com.projects.islami_app.R
-import com.projects.islami_app.radio.RadioInfo.ACTION_CLOSE
-import com.projects.islami_app.radio.RadioInfo.ACTION_PLAY
-import com.projects.islami_app.radio.RadioInfo.ACTION_PLAY_FIRST_TIME
-import com.projects.islami_app.radio.RadioInfo.ACTION_STOP
-import com.projects.islami_app.radio.RadioInfo.play
-import com.projects.islami_app.radio.RadioInfo.playedBefore
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_CLOSE
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_PLAY
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_PLAY_FIRST_TIME
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_STOP
+import com.projects.islami_app.ui.radio.RadioInfo.play
+import com.projects.islami_app.ui.radio.RadioInfo.playedBefore
 
 class PlayerService():JobIntentService() {
     var mediaPlayer:MediaPlayer?= MediaPlayer()
@@ -74,7 +71,7 @@ class PlayerService():JobIntentService() {
         TODO("Not yet implemented")
     }
 
-    var onButtonNotificationClickListener:ButtonNotificationClick?=null
+    var onButtonNotificationClickListener: ButtonNotificationClick?=null
 
     interface ButtonNotificationClick
     {
@@ -133,7 +130,7 @@ class PlayerService():JobIntentService() {
         mediaPlayer?.reset()
     }
 
-    var unbindServiceListener:UnbindService?=null
+    var unbindServiceListener: UnbindService?=null
 
     interface UnbindService
     {
@@ -193,19 +190,19 @@ class PlayerService():JobIntentService() {
     }
 
     private fun getPlayPindingButton(): PendingIntent {
-        val intent=Intent(this,PlayerService::class.java)
+        val intent=Intent(this, PlayerService::class.java)
         intent.action= ACTION_PLAY
         val pendingIntent=PendingIntent.getService(this,12,intent, PendingIntent.FLAG_IMMUTABLE)
         return pendingIntent
     }
     private fun getStopPindingButton(): PendingIntent {
-        val intent=Intent(this,PlayerService::class.java)
+        val intent=Intent(this, PlayerService::class.java)
         intent.action= ACTION_STOP
         val pendingIntent=PendingIntent.getService(this,0,intent, PendingIntent.FLAG_IMMUTABLE)
         return pendingIntent
     }
     private fun getClosePindingButton(): PendingIntent {
-        val intent=Intent(this,PlayerService::class.java)
+        val intent=Intent(this, PlayerService::class.java)
         intent.action= ACTION_CLOSE
         val pendingIntent=PendingIntent.getService(this,0,intent, PendingIntent.FLAG_IMMUTABLE)
         return pendingIntent
@@ -218,7 +215,7 @@ class PlayerService():JobIntentService() {
 
     inner class MyBinnder:Binder()
     {
-        fun getService():PlayerService
+        fun getService(): PlayerService
         {
             return this@PlayerService
         }

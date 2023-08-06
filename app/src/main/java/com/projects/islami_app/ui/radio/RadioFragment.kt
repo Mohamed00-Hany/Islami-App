@@ -1,4 +1,4 @@
-package com.projects.islami_app.radio
+package com.projects.islami_app.ui.radio
 
 import android.content.ComponentName
 import android.content.Context
@@ -15,17 +15,17 @@ import com.projects.islami_app.R
 import com.projects.islami_app.apis.ApiManager
 import com.projects.islami_app.apis.models.RadioResponse
 import com.projects.islami_app.databinding.FragmentRadioBinding
-import com.projects.islami_app.radio.RadioInfo.ACTION_CLOSE
-import com.projects.islami_app.radio.RadioInfo.ACTION_PLAY
-import com.projects.islami_app.radio.RadioInfo.ACTION_PLAY_FIRST_TIME
-import com.projects.islami_app.radio.RadioInfo.ACTION_STOP
-import com.projects.islami_app.radio.RadioInfo.channelsNumber
-import com.projects.islami_app.radio.RadioInfo.counter
-import com.projects.islami_app.radio.RadioInfo.play
-import com.projects.islami_app.radio.RadioInfo.playedBefore
-import com.projects.islami_app.radio.RadioInfo.radioPlayerService
-import com.projects.islami_app.radio.RadioInfo.radioResponse
-import com.projects.islami_app.radio.RadioInfo.serviceConnection
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_CLOSE
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_PLAY
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_PLAY_FIRST_TIME
+import com.projects.islami_app.ui.radio.RadioInfo.ACTION_STOP
+import com.projects.islami_app.ui.radio.RadioInfo.channelsNumber
+import com.projects.islami_app.ui.radio.RadioInfo.counter
+import com.projects.islami_app.ui.radio.RadioInfo.play
+import com.projects.islami_app.ui.radio.RadioInfo.playedBefore
+import com.projects.islami_app.ui.radio.RadioInfo.radioPlayerService
+import com.projects.islami_app.ui.radio.RadioInfo.radioResponse
+import com.projects.islami_app.ui.radio.RadioInfo.serviceConnection
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -96,7 +96,8 @@ class RadioFragment : Fragment() {
         super.onResume()
         if(radioPlayerService!=null&&radioPlayerService?.onButtonNotificationClickListener==null)
         {
-            radioPlayerService?.onButtonNotificationClickListener=object :PlayerService.ButtonNotificationClick
+            radioPlayerService?.onButtonNotificationClickListener=object :
+                PlayerService.ButtonNotificationClick
             {
                 override fun onButtonClick(action: String) {
                     if(action==ACTION_PLAY)
@@ -128,7 +129,8 @@ class RadioFragment : Fragment() {
                 radioPlayerService=binder.getService()
                 if(radioPlayerService?.onButtonNotificationClickListener==null)
                 {
-                    radioPlayerService?.onButtonNotificationClickListener=object :PlayerService.ButtonNotificationClick
+                    radioPlayerService?.onButtonNotificationClickListener=object :
+                        PlayerService.ButtonNotificationClick
                     {
                         override fun onButtonClick(action: String) {
                             if(action==ACTION_PLAY)
@@ -146,7 +148,7 @@ class RadioFragment : Fragment() {
                         }
                     }
                 }
-                radioPlayerService?.unbindServiceListener=object :PlayerService.UnbindService
+                radioPlayerService?.unbindServiceListener=object : PlayerService.UnbindService
                 {
                     override fun unBind() {
                         unbindService()
@@ -175,7 +177,7 @@ class RadioFragment : Fragment() {
                 {
                     if(!playedBefore)
                     {
-                        val intent=Intent(requireActivity(),PlayerService::class.java)
+                        val intent=Intent(requireActivity(), PlayerService::class.java)
                         intent.putExtra("url",currentChannelUrl)
                         intent.putExtra("name",currentChannelName)
                         intent.action = ACTION_PLAY_FIRST_TIME
