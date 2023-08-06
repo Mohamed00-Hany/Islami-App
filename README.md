@@ -1,5 +1,5 @@
 # Islami-App
-This app can help Muslims to read quran and ahadeth also they can use sebha and play radio to listen to quran also convert the app them to night or light.
+This app can help Muslims to read quran and ahadeth also they can use sebha and play radio to listen to quran also convert the app theme to night or light.
 ## Topics
 + #### Fragments
 + #### Recycler View
