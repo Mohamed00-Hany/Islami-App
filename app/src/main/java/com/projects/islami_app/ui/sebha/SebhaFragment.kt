@@ -1,4 +1,4 @@
-package com.projects.islami_app.sebha
+package com.projects.islami_app.ui.sebha
 
 import android.os.Bundle
 import android.view.LayoutInflater

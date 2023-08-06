@@ -1,4 +1,4 @@
-package com.projects.islami_app.ahadeth
+package com.projects.islami_app.ui.ahadeth
 
 import android.view.LayoutInflater
 import android.view.View

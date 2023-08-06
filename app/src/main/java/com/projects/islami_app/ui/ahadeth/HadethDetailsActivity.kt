@@ -1,4 +1,4 @@
-package com.projects.islami_app.ahadeth
+package com.projects.islami_app.ui.ahadeth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

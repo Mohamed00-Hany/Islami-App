@@ -1,10 +1,12 @@
-package com.projects.islami_app
+package com.projects.islami_app.ui
 
 import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
+import androidx.appcompat.app.AppCompatDelegate
+import com.projects.islami_app.R
 
 class MyApplication:Application() {
 
@@ -16,6 +18,9 @@ class MyApplication:Application() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannel()
+        val sharedPreferences = getSharedPreferences("SharedPrefs", MODE_PRIVATE);
+        val nightMode = sharedPreferences.getInt("NightModeInt", 1);
+        AppCompatDelegate.setDefaultNightMode(nightMode);
     }
 
     private fun createNotificationChannel() {
