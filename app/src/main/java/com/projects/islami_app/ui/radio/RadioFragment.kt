@@ -1,15 +1,19 @@
 package com.projects.islami_app.ui.radio
 
+import android.Manifest
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.projects.islami_app.R
 import com.projects.islami_app.apis.ApiManager
@@ -29,6 +33,7 @@ import com.projects.islami_app.ui.radio.RadioInfo.serviceConnection
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.security.Permission
 
 class RadioFragment : Fragment() {
     lateinit var viewBinding:FragmentRadioBinding
@@ -66,6 +71,14 @@ class RadioFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.TIRAMISU)
+        {
+            val permissionState = activity?.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+            if (permissionState == PackageManager.PERMISSION_DENIED)
+            {
+                activity?.requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS),1)
+            }
+        }
         callRadioApi()
     }
 
@@ -120,6 +133,19 @@ class RadioFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         radioPlayerService?.onButtonNotificationClickListener=null
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.TIRAMISU)
+        {
+            val permissionState = ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.POST_NOTIFICATIONS)
+            if (permissionState == PackageManager.PERMISSION_DENIED) {
+                if (radioPlayerService?.mediaPlayer?.isPlaying==true)
+                {
+                    radioPlayerService?.stopMediaPlayer()
+                    radioPlayerService?.stopService()
+                    playedBefore =false
+                    play =-1
+                }
+            }
+        }
     }
 
     private fun initializeConnection():ServiceConnection {
@@ -268,4 +294,5 @@ class RadioFragment : Fragment() {
             }
         }
     }
+
 }

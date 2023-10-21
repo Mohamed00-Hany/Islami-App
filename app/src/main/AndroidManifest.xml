@@ -17,7 +17,8 @@
         android:theme="@style/Theme.IslamiApp"
         tools:targetApi="31">
 
-        <service android:name=".ui.radio.PlayerService"/>
+        <service android:name=".ui.radio.PlayerService"
+            android:foregroundServiceType="mediaPlayback"/>
 
         <activity
             android:name=".ui.ahadeth.HadethDetailsActivity"
