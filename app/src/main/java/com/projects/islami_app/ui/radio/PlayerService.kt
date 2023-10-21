@@ -3,14 +3,15 @@ package com.projects.islami_app.ui.radio
 import android.app.Notification
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Binder
+import android.os.Build
 import android.os.IBinder
 import android.widget.RemoteViews
-import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
 import com.projects.islami_app.ui.MyApplication.Companion.NOTIFICATION_CHANNEL_ID
 import com.projects.islami_app.R
@@ -21,7 +22,7 @@ import com.projects.islami_app.ui.radio.RadioInfo.ACTION_STOP
 import com.projects.islami_app.ui.radio.RadioInfo.play
 import com.projects.islami_app.ui.radio.RadioInfo.playedBefore
 
-class PlayerService():JobIntentService() {
+class PlayerService:Service() {
     var mediaPlayer:MediaPlayer?= MediaPlayer()
     val binder=MyBinnder()
     private val RADIO_PLAYER_NOTIFICATION_ID=200
@@ -65,10 +66,6 @@ class PlayerService():JobIntentService() {
             }
 
         return START_NOT_STICKY
-    }
-
-    override fun onHandleWork(intent: Intent) {
-        TODO("Not yet implemented")
     }
 
     var onButtonNotificationClickListener: ButtonNotificationClick?=null
@@ -137,8 +134,15 @@ class PlayerService():JobIntentService() {
         fun unBind()
     }
 
-    private fun stopService() {
-        stopForeground(true)
+    fun stopService() {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.N)
+        {
+            stopForeground(STOP_FOREGROUND_REMOVE)
+        }
+        else
+        {
+            stopForeground(true)
+        }
         unbindServiceListener?.unBind()
         stopSelf()
     }
